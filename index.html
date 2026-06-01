@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=7">
+  <meta name="description" content="Calculo, soma,codigos">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>Leitor de Códigos com Soma de Pesos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=7">
+  <meta name="description" content="Calculo, soma,codigos">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>Leitor de Códigos com Soma de Pesos</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Estilos adicionais para centralizar e ajustar o tamanho do logotipo */
+    .logo-container {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    .logo-img {
+      max-width: 200px;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Logotipo adicionado aqui -->
+  
+
+  <div class="container">
+    <div class="logo-container">
+    <img src="./assets/diebold_logo_web.png" alt="Logo Diebold Nixdorf" class="logo-img">
+  </div>
+    <div class="titulo">
+      <h2>Leitor de Códigos</h2>
+    </div>
+    
+    
+    <label for="codigoInput">Digite ou escaneie o código:</label>
+    <input type="text" id="codigoInput" autocomplete="off" autofocus>
+    
+    <button onclick="adicionarLeitura()">Adicionar</button>
+    <button onclick="resetar()">Resetar</button>
+    
+    <div class="erro" id="erroMsg"></div>
+    
+    <div class="resultados">
+      <div><strong>Leituras:</strong> <span id="volume">0</span></div>
+      <div><strong>Peso total:</strong> <span id="pesoTotal">0.00</span> kg</div>
+      
+      <!-- Novo input para multiplicar o peso -->
+      <div>
+        <label for="multiplicador">Multiplicar:</label>
+        <input type="number" id="multiplicador"  value="1" oninput="atualizarResultados()">
+      </div>
+      <div><strong>Peso total multiplicado:</strong> <span id="pesoMultiplicado">0.00</span> kg</div>
+      
+      <div class="leituras-lista" id="leiturasLista"></div>
+    </div>
+  </div>
+  
+ 
+</body>
+</html>
+<script src="./script.js"></script>
